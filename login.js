@@ -1,8 +1,10 @@
 
 import app from "./index.js";
 import Register from "./register.js"
-import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-auth.js";
-
+import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
+let popup = document.querySelector('.popup')
+let iconclose = document.querySelector('.popup__header')
+let loginsuccess = document.querySelector('.popup__body h2');
 class Login {
   $containerDiv
   $titleHeader
@@ -54,11 +56,15 @@ class Login {
       alert("Password must be least 6 letters!");
       return;
     }
+
     const auth = getAuth();
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
+        loginsuccess.innerHTML=" login successfull"
+        toggle()
+        return ;
         // ...
       })
       .catch((error) => {
@@ -72,4 +78,15 @@ class Login {
     app.changeActiveScreen(signup);
   }
 }
+function toggle(e){
+  popup.classList.toggle('hide')
+}
+
+iconclose.addEventListener('click', toggle)
+popup.addEventListener('click' , function(e)  {
+  if(e.target == e.currentTarget){
+    console.log("aaaaaaa")
+    toggle()
+  }
+})
 export default Login;

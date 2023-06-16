@@ -1,6 +1,6 @@
 import app from "./index.js";
 import Login from "./login.js"
-import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
 let popup = document.querySelector('.popup')
 let iconclose = document.querySelector('.popup__header i')
 let emailemtp = document.querySelector('.popup__body h2');
@@ -74,7 +74,7 @@ class Register {
      if(email == "") {
       emailemtp.innerHTML="Email empty"
       toggle()
-    return false;
+    return ;
      }
      if(password.length < 6) {
       alert("Password must be least 6 letters!");
@@ -83,26 +83,26 @@ class Register {
      if(userName == "") {
       useremp.innerHTML="User empty"
     toggle()
-    return false;
+    return ;
 
      }
      if(password == ""){
       passemp.innerHTML="Password empty"
       toggle()
-    return false;
+    return ;
      }
      if(confirmPass == "") {
       CFpassemt.innerHTML="Please confirm your password"
       toggle()
-    return false;
+    return ;
      }
      if(password != confirmPass) {
       wrongcf.innerHTML="Your Password Not Macth "
       toggle()
-    return false;
+    return ;
      }
     // if(email != " " && userName != " " && password.length >= 6 && confirmPass == password ){
-      
+    //   creatsuccess.innerHTML="Create Successfull"
     //   toggle()
     //   return true;
     // }
@@ -112,7 +112,7 @@ class Register {
         // Signed in 
         const user = userCredential.user;
         console.log(user);
-        creatsuccess.innerHTML="Create Successfull"
+        
         // ...
       })
       .catch((error) => {

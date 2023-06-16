@@ -134,7 +134,7 @@ form button :hover{
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     
 }
-.popup__header :hover i{
+.popup__header i :hover {
   cursor: pointer;
 }
 .popup__header i{

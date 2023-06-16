@@ -2,130 +2,131 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="signin&login.css">
-    <script src="https://kit.fontawesome.com/af6fc771e3.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="signin&login.css">
+  <script src="https://kit.fontawesome.com/af6fc771e3.js" crossorigin="anonymous"></script>
+  <title>Document</title>
 </head>
 
 <body>
-    <div class="menu">
-        <nav>
-          <h2 style="color: rgb(219, 219, 219);">
+  <div class="menu">
+    <nav>
+      <h2 style="color: rgb(219, 219, 219);">
         HungBooking</h2>
-          <ul class="btck">
-            <li><a href="index1.html">Home page</a>
-            </li>
-            <li><a href="">Event</a>
-            </li>
-            <li><a href="index.html">Sign in</a>
-            </li>
-            <li><a href="index.html">Sign up</a>
-            </li>
-            <li><a href="cart.html" >Booked Room :</a>
-            </li>
-          </ul>
-        </nav>
-    </div>
-<div class="signupbox">
+      <ul class="btck">
+        <li><a href="index1.html">Home page</a>
+        </li>
+        <li><a href="">Event</a>
+        </li>
+        <li><a href="index.html">Sign in</a>
+        </li>
+        <li><a href="index.html">Sign up</a>
+        </li>
+        <li><a href="cart.html">Booked Room :</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="signupbox">
     <div class="popup hide">
-        <div class="popup__inner">
-          <div class="popup__header">
-            <h2> notification </h2>
-            <i class="fa fa-times" aria-hidden="true"></i>
-          </div>
-    
-          <div class="popup__body">
-            <h2> </h2>
-          </div>
+      <div class="popup__inner">
+        <div class="popup__header">
+          <h2> notification </h2>
+          <i class="fa fa-times" aria-hidden="true"></i>
         </div>
+
+        <div class="popup__body">
+          <h2> </h2>
+        </div>
+      </div>
     </div>
-    
+
     <img class="img_coverHeader" src="./pic/header.jpg" alt="" />
     <div id="app"> </div>
-</div>
-    
-    
-    <div class="footer">
-        <h1 style="color: rgb(235, 235, 235);padding-top: 50px;" >   <div class="logo_container">
-          <h2 style="color: white; margin-left: 25px;">HungBooking</h2>
-        </div> 
-          <!-- <ul>
+  </div>
+
+
+  <div class="footer">
+    <h1 style="color: rgb(235, 235, 235);padding-top: 50px;">
+      <div class="logo_container">
+        <h2 style="color: white; margin-left: 25px;">HungBooking</h2>
+      </div>
+      <!-- <ul>
           <i class='fab fa-facebook'></i>
           <i class='fab fa-instagram'></i>
           <i class='fab fa-twitter'></i>
           <i class='fab fa-youtube'></i>
         </ul> -->
-      </h1>
-      <div class="footer1">
-        <div class="f1">
-          <h2>RESOURCES</h2>
-          <p>Application</p>
-          <p>Documentation</p>
-          <p>Systems</p>
-          <p>FAQ</p>
-        </div>
-        <div class="f5">
-          <h2>CONTACTS</h2>
-          <p>C****@gmail.com</p>
-          <p>+84 94368****</p>
-    
-        </div>
-        <div class="f2">
-          <h2>PRICING</h2>
-          <p>Overview</p>
-          <p>Premium plans</p>
-          <p>Affiliate Program</p>
-          <p>Promotions</p>
-    
-        </div>
-        <div class="f3">
-          <h2>COMPANY</h2>
-          <p>About us</p>
-          <p>Blog</p>
-          <p>Partnerships</p>
-          <p>Careera</p>
-          <p>Press</p>
-        </div>
-        <div class="f4">
-          <h2>SOCIAL</h2>
-          <p>facebook</p>
-          <p>Twitter</p>
-          <p>Instagram</p>
-          <p>Youtube</p>
-    
-        </div>
+    </h1>
+    <div class="footer1">
+      <div class="f1">
+        <h2>RESOURCES</h2>
+        <p>Application</p>
+        <p>Documentation</p>
+        <p>Systems</p>
+        <p>FAQ</p>
       </div>
-      </div>
+      <div class="f5">
+        <h2>CONTACTS</h2>
+        <p>C****@gmail.com</p>
+        <p>+84 94368****</p>
 
-      <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-analytics.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-      
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-          apiKey: "AIzaSyD4IyXkWVRlyVwm-OcY4u_k7BcjSJ5CHdo",
-          authDomain: "signin-259d0.firebaseapp.com",
-          databaseURL: "https://signin-259d0-default-rtdb.asia-southeast1.firebasedatabase.app",
-          projectId: "signin-259d0",
-          storageBucket: "signin-259d0.appspot.com",
-          messagingSenderId: "1033538470064",
-          appId: "1:1033538470064:web:1c56b29af242de170ebb75",
-          measurementId: "G-NWB8P08TFT"
-        };
-      
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-      </script>
-    
-    <script src="./index.js" type="module"></script>
+      </div>
+      <div class="f2">
+        <h2>PRICING</h2>
+        <p>Overview</p>
+        <p>Premium plans</p>
+        <p>Affiliate Program</p>
+        <p>Promotions</p>
+
+      </div>
+      <div class="f3">
+        <h2>COMPANY</h2>
+        <p>About us</p>
+        <p>Blog</p>
+        <p>Partnerships</p>
+        <p>Careera</p>
+        <p>Press</p>
+      </div>
+      <div class="f4">
+        <h2>SOCIAL</h2>
+        <p>facebook</p>
+        <p>Twitter</p>
+        <p>Instagram</p>
+        <p>Youtube</p>
+
+      </div>
+    </div>
+  </div>
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyCcyWMrsvdE-V7E_RNID3pRT328rC53-Zw",
+      authDomain: "signin-2-99454.firebaseapp.com",
+      databaseURL: "https://signin-2-99454-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "signin-2-99454",
+      storageBucket: "signin-2-99454.appspot.com",
+      messagingSenderId: "60368484610",
+      appId: "1:60368484610:web:54e999d30c94c0ac54ea1b",
+      measurementId: "G-R57PSF6GXP"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+  
+  <script src="./index.js" type="module"></script>
 </body>
 
 </html>
