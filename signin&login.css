@@ -295,6 +295,7 @@ form button :hover{
   padding: 10px 0;
 }
 .product ion-icon {
+  
   cursor: pointer;
 }
 .quantity ion-icon {

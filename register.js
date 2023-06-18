@@ -9,6 +9,7 @@ let useremp = document.querySelector('.popup__body h2');
 let passemp = document.querySelector('.popup__body h2');
 let CFpassemt = document.querySelector('.popup__body h2');
 let wrongcf = document.querySelector('.popup__body h2');
+let advail =document.querySelector('.popup__body h2');
 class Register {
   $containerDiv
   $titleHeader
@@ -71,6 +72,7 @@ class Register {
      const password = this.$passInputPass.value;
      const confirmPass = this.$confirmPassInputPass.value;
      const userName = this.$nameInputTxt.value;
+    
      if(email == "") {
       emailemtp.innerHTML="Email empty"
       toggle()
@@ -101,11 +103,11 @@ class Register {
       toggle()
     return ;
      }
-    // if(email != " " && userName != " " && password.length >= 6 && confirmPass == password ){
-    //   creatsuccess.innerHTML="Create Successfull"
-    //   toggle()
-    //   return true;
-    // }
+    if(email != " " && userName != " " && password.length >= 6 && confirmPass == password ){
+      creatsuccess.innerHTML="Create Successfull"
+      toggle()
+      // return ;
+    }
     const auth = getAuth();
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
@@ -118,7 +120,8 @@ class Register {
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        alert(errorMessage);
+        advail.innerHTML="email already used"
+        // alert(errorMessage);
         // ..
       });
   }

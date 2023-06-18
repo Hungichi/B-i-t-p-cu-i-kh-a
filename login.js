@@ -5,6 +5,9 @@ import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/fir
 let popup = document.querySelector('.popup')
 let iconclose = document.querySelector('.popup__header')
 let loginsuccess = document.querySelector('.popup__body h2');
+let passempty = document.querySelector('.popup__body h2');
+let emailempty = document.querySelector('.popup__body h2');
+let createacc = document.querySelector('.popup__body h2');
 class Login {
   $containerDiv
   $titleHeader
@@ -49,11 +52,13 @@ class Login {
     const email = this.$emailInputEmail.value;
     const password = this.$passInputPass.value;
     if (email == "") {
-      alert("Email cannot be empty!");
+      emailempty.innerHTML="Please enter your email "
+      toggle()
       return;
     }
-    if (password.length < 6) {
-      alert("Password must be least 6 letters!");
+    if (password == "") {
+      passempty.innerHTML="please enter your password"
+      toggle()
       return;
     }
 
@@ -70,6 +75,8 @@ class Login {
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
+        createacc.innerHTML="Please sign up below";
+        toggle();
       });
   }
   gotoSignup = () => {
@@ -85,7 +92,7 @@ function toggle(e){
 iconclose.addEventListener('click', toggle)
 popup.addEventListener('click' , function(e)  {
   if(e.target == e.currentTarget){
-    console.log("aaaaaaa")
+    
     toggle()
   }
 })
